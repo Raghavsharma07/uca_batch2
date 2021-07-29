@@ -1,10 +1,20 @@
+
 #include <stdio.h>
-#include<string.h>
+/*Worksheet 1
+@Raghav
 //ques 8- reverse a string
+//*/
+//
 void rev(char *str)
 {
-    int l=strlen(str);
-    int low=0,high=l-1;
+    int h=0,high;
+    while(str[h]!='\0')
+    {
+	    h++;
+    }
+    //high gives length now
+    high=h-1;
+    int low=0;
     char c;
     while(low<=high)
     {

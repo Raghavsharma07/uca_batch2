@@ -1,10 +1,14 @@
-#include<stdio.h>
 
-//Ques 2 - printing pattern
+#include <stdio.h>
+/* Uca_Batch 2 Worksheet 1
+ * @Raghav
+//Ques 2 -( printing pattern)
+*/
 int main()
 {
     int i,j,k;
     int n;
+    //input
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {

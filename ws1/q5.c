@@ -1,6 +1,10 @@
 
 #include <stdio.h>
+//Uca_Batch2
+//Worksheet 1
 //q5 multiplying matrices
+////@Raghav
+
 int main()
 {
     int n;
@@ -10,6 +14,7 @@ int main()
     int a[n][n];
     int b[n][n];
     int c[n][n];
+    //scanning 2darray 1
     printf("Enter elements for array 1\n");
     for(i=0;i<n;i++)
     {
@@ -18,6 +23,7 @@ int main()
             scanf("%d",&a[i][j]);
         }
     }
+    //scanning 2darray 2
     printf("Enter elements for array 2\n");
     for(i=0;i<n;i++)
     {
@@ -26,6 +32,7 @@ int main()
             scanf("%d",&b[i][j]);
         }
     }
+    //mutliplying both matrices
     for(i=0;i<n;i++)
     {
         
@@ -43,6 +50,7 @@ int main()
             
         }
     }
+    //displaying final array
     for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)

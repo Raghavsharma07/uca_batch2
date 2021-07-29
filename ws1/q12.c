@@ -1,9 +1,20 @@
 //ques - 12 (rightmost index of s2)
+//Ua_b2
+//Worksheet 1
+//@Raghav
 #include <stdio.h>
-#include<string.h>
+
 int strrindex(char *s1, char *s2)
 {
-    int j,i,l1=strlen(s1),l2=strlen(s2),ct=0,index=-1;
+    int j,i,l1=0,l2=0,ct=0,index=-1;
+    while(s1[l1]!='\0')
+    {
+	    l1++;
+    }
+    while(s2[l2]!='\0')
+    {
+	    l2++;
+    }
     for(i=0;i<l1;i++)
     {
         ct=0;

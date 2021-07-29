@@ -1,6 +1,5 @@
 //ques - 9
 #include <stdio.h>
-#include<string.h>
 #include<math.h>
 /*
 int power(int n,int p)
@@ -14,7 +13,13 @@ int power(int n,int p)
 }*/
 int htoi(char *str)
 {
-    int i,j,l=strlen(str),digit=0,sum=0,p=0;
+	int l,k=0;
+	while(str[k]!='\0')
+	{
+		k++;
+	}
+	l=k;
+    int i,j,digit=0,sum=0,p=0;
     for(i=l-1;i>=0;i--)
     {
         digit=0;

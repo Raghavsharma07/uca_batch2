@@ -3,7 +3,16 @@
 #include<string.h>
 void str_n_cat(char *dest2, char *source, int n)
 {
-    int l1=strlen(dest2),l2=strlen(source),i,j;
+    int l1=0,l2=0,i,j;
+    while(dest2[l1]!='\0')
+    {
+	    l1++;
+    }
+    while(source[l2]!='\0')
+    {
+            l2++;
+    }
+
     for(i=l1,j=0;i<l1+n,j<n;i++,j++)
     {
         dest2[i]=source[j];

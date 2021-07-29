@@ -6,11 +6,20 @@ Output: “ad”
 */
 
 #include <stdio.h>
-#include<string.h>
+//Worksheet 1
+//ques 10
 //func to squeeze a string
 char *squeeze(char *s1, char *s2)
 {
-    int l1=strlen(s1),l2=strlen(s2),i,j,l=0,ct=0,k=0;
+    int l1=0,l2=0,i,j,l=0,ct=0,k=0;
+    while(s1[l1]!='\0')
+    {
+	    l1++;
+    }
+    while(s2[l2]!='\0')
+    {
+	    l2++;
+    }
     char s3[100];
     for(i=0;i<l1;i++)
     {

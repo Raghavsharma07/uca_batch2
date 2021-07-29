@@ -1,9 +1,20 @@
 #include <stdio.h>
-#include<string.h>
+//Worksheet 1
+//@Raghav 
 //ques 13- s2 at end
+
 int strend(char *s1, char *s2)
 {
-    int j,i,l1=strlen(s1),l2=strlen(s2),ct=0;
+    int j,i,l1=0,l2=0,ct=0;
+    while(s1[l1]!='\0')
+    {
+	    l1++;
+    }
+    while(s2[l2]!='\0')
+    {
+            l2++;
+    }
+
     for(i=l1-l2,j=0;i<l1,j<l2;i++,j++)
     {
         if(s1[i]==s2[j])
@@ -15,6 +26,7 @@ int strend(char *s1, char *s2)
     return 0;
     
 }
+
 
 int main()
 {

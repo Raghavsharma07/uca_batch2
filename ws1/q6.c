@@ -1,14 +1,8 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
+//Uca_Batch 2
+//Worksheet 1 Ques 6
 #include <stdio.h>
-#include<string.h>
 //ques 6 check reverse
+
 void check_rev(char *s, int l)
 {
     int i,j,ct=0;
@@ -22,10 +16,11 @@ void check_rev(char *s, int l)
     else
     printf("false\n");
 }
+
 void uniform(char *s1)
 {
    // printf("%s\n",s1);
-    int j=0,i,l1=strlen(s1),l2,ct=0,l=0;
+    int j=0,i,l2,ct=0,l=0;
     //printf("%d\n",l1);
     //l keeps track of required alphabets
     char st[100];
@@ -50,11 +45,12 @@ void uniform(char *s1)
     //printf("%s\n",st);
     check_rev(st,l);//checking reverse equal or not
 }
+
 int main()
 {
     char str1[100],str2[100];
    scanf("%[^\n]",str1);
-   //func call to make capital letters small
+   //func call to make capital letters small so we get a uniform string for comparison . this will further call check_rev function
    uniform(str1);
   
 

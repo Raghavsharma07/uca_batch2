@@ -1,5 +1,10 @@
 #include <stdio.h>
+/* 
+ * Worksheet 1
+ * @Raghav
 //ques 4 reverse array
+*/
+//to print array
 void print(int *a, int n)
 {
     for(int i=0;i<n;i++)
@@ -8,6 +13,7 @@ void print(int *a, int n)
     }
     printf("\n");
 }
+//to reverse the array
 void reverse(int *a, int n)
 {
     int l=0,h=n-1,temp;
@@ -31,9 +37,11 @@ int main()
     {
         scanf("%d",&a[i]);
     }
+
     print(a,n);
     printf("After reversing \n");
     reverse(a,n);
+    //reversed array
     print(a,n);
     
 
