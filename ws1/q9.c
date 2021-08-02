@@ -13,51 +13,52 @@ int power(int n,int p)
 }*/
 int htoi(char *str)
 {
+
 	int l,k=0;
 	while(str[k]!='\0')
 	{
 		k++;
 	}
 	l=k;
-    int i,j,digit=0,sum=0,p=0;
-    for(i=l-1;i>=0;i--)
-    {
-        digit=0;
-        if(str[i]>=48 && str[i]<=57)
+        int i,j,digit=0,sum=0,p=0;
+        for(i=l-1;i>=0;i--)
         {
-        digit=str[i]-'0';
-       // printf("%d ",digit);
-        }
-        if(str[i]=='a'|| str[i]=='A')
-        {
-            digit=10;
-        }
-        if(str[i]=='b'|| str[i]=='B')
-        {
-            digit=11;
-        }
-        if(str[i]=='c'|| str[i]=='C')
-        {
-            digit=12;
-        }
-        if(str[i]=='d'|| str[i]=='D')
-        {
-            digit=13;
-        }
-        if(str[i]=='e'||str[i]=='E')
-        {
-            digit=14;
-        }
-        if(str[i]=='f'|| str[i]=='F')
-        {
-            digit=15;
-        }
-        sum=sum+digit*pow(16,p);
-        p++;
+                digit=0;
+               if(str[i]>=48 && str[i]<=57)
+               {
+                       digit=str[i]-'0';
+                       // printf("%d ",digit);
+               }
+               if(str[i]=='a'|| str[i]=='A')
+               {
+                       digit=10;
+               }
+               if(str[i]=='b'|| str[i]=='B')
+               {
+                       digit=11;
+               }
+               if(str[i]=='c'|| str[i]=='C')
+               {
+                       digit=12;
+               }
+               if(str[i]=='d'|| str[i]=='D')
+               {
+                       digit=13;
+               }
+               if(str[i]=='e'||str[i]=='E')
+               {
+                       digit=14;
+               } 
+               if(str[i]=='f'|| str[i]=='F')
+               {
+                       digit=15;
+               }
+               sum=sum+digit*pow(16,p);
+               p++;
         
-        //printf("%d ",digit);
-    }
-    return sum;
+               //printf("%d ",digit);
+       }
+       return sum;
     
 }
 
