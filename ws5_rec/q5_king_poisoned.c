@@ -7,7 +7,7 @@
  * @Raghav
  * */
 
-
+//APPROACH : We can use binary search to find the poisoned bottle. Becaues we have 10 prisoners so we can easily find the poisoned bottle by repeatedly dividing by 2 and so on. As 2^10=1024 this would work for //1000 bottles
 
 #include <stdio.h>
 
