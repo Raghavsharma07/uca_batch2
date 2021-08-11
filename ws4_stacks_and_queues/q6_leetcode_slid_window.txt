@@ -1,0 +1,54 @@
+Leetcode problem
+
+Sliding Window
+11/08/2021
+
+@Raghav
+
+
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ 
+ */
+Code :
+
+
+int max_ele(int *nums , int l, int h)
+{
+    int maxim=nums[l];
+    for(int i=l;i<h;i++)
+    {
+        if(nums[i]>maxim)
+        {
+            maxim=nums[i];
+        }
+    }
+    return maxim;
+}
+int* maxSlidingWindow(int* nums, int numsSize, int k, int* returnSize){
+    int i,max,k2=k,j;
+    int size=0;
+    while(k2<=numsSize)
+    {
+        size++;
+        k2++;
+    }
+    
+    int *b;
+    b=(int *)malloc(sizeof(int)*size);
+    for(i=0 , j=0; i+k <numsSize, j<size; i++, j++)
+    {
+        b[j]=max_ele(nums, i, i+k);
+        printf("%d ",b[j]);
+        //a[i]=max;
+    }
+    int c[size];
+    for(i=0;i<size;i++)
+    {
+        c[i]=b[i];
+    }
+    *returnSize=size;
+    return b;
+
+}
