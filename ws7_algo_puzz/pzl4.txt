@@ -1,0 +1,43 @@
+Puzzle 4
+Worksheet 7
+(Counterfeit coins)
+
+@Raghav
+11/08/2021
+
+
+Approach
+H -> coin either will be heavier or equal 
+L -> coin either lighter or equal 
+E -> Coin is normal
+APPROACH TO FIND THE COUNTERFEIT COIN
+let Initially all 12 coins 
+? ? ? ? ? ? ? ? ? ? ? ?
+
+Compare 4 ? each  
+(TURN 1)
+
+? ? ? ?  vs  ? ? ? ?   and ? ? ? ? left 
+CASE 1 : Balanced .
+The coins are E E E E E E E E and ? ? ? ?
+Compare 3 Es and 3 ?s   (TURN 2)
+? ? ? vs E E Es  
+Case 1a :
+Balanced. Thus 11 Es and 1 ? . ( TURN 3)
+Compare ? vs E to get whether the counterfeit coin is heavy or light .
+Case 1b :
+Imbalanced. So either L L L or H H H :
+1b i) L L L -> Compare 2 Ls . if equal third L is counterfeit lighter else the one going up is counterfeit lighter . (TURN 3)
+1b ii)H H H -> Compare 2 Hs. if equal third H is counterfeit heavier else the one going down is counterfeit heavier .(TURN 3)
+
+
+CASE 2 :
+IMBALANCED 
+H H H H   L L L L   E E E E are the present coins .
+(TURN 2)
+Compare   L L L H  vs  E E E L
+Case 2a: Balanced .  We have  3 Hs remeaining . Compare 2 of them if any goes down its heavy counterfeit . else third H is heavy counterfeit
+Case 2a i) E E E L goes up, so either L of this is lighter else H of L L L H is heavier. Compare H vs E (if goes down H heavy counterfeit else L light counterfeit)
+Case 2b ii)L L L H goes up E E E L goes down. So 3 of  L L L is lighter counterfeit(as H heavier case rejected)
+Compare 2 Ls. one going up is lighter counterfeit else 3rd L is light counterfeit. 
+

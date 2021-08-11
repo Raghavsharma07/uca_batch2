@@ -1,0 +1,17 @@
+**Uca_Batch 2
+Ws7 
+Puzzle 1
+(Hat Puzzle )
+@Raghav
+11/08/2021
+Approach to solve
+
+
+Consider tenth person saying black if black caps are even, else white.(he can view all 9 persons in front)
+Say he says black
+Now the second person can guess by counting no. of black caps in front of him . ( if odd then he is wearing black cap  as total blacks are even told by first , 
+else if he sees even black caps then it must mean he has white cap )
+similarly he can guess if 10th person says white initially .
+
+Thus every person can tell his cap after 10th person.
+So max 9 people saved
