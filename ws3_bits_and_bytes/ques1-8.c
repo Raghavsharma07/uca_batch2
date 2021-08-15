@@ -108,15 +108,26 @@ int bang(int x) {
 
 
 /*
-/* Return x with the n bits that begin at position p inverted (i.e. turn 0 /* into 1 and vice versa)
-/* and the rest left unchanged. Consider the indices of x to begin with the /* lower -order bit   numbered
-/* Legal ops: ~ & ^ | << >>
-/* as zero
+ Return x with the n bits that begin at position p inverted (i.e. turn 0  into 1 and vice versa)
+ and the rest left unchanged. Consider the indices of x to begin with the  lower -order bit   numbered
+ Legal ops: ~ & ^ | << >>
+ as zero
 */
 int invert (int x, int p, int n) {
 
         //TODO
-        return 0;
+	//x=18  -> 1 0 0 1 0
+        //p=5
+        //n=2
+        int k=(1<<31)>>31; //-1
+        int b=((1<<n)+k);// n=2 -> 11 , n=3->111 and so on  ( b= 3 in our case {11} )
+        int c=b<<(p-n);// say b is 11 and p-n =2 then c gives 1100 (say p is 4 and n is 2)  //11000 (taking 1s to position p) 
+        // printf("%d ",c);
+        // printf("%d ",b);
+        int d=((x&c)>>(p-n));//x&c extracts given bytes and right shift removes additional nos following
+        // printf(" %d ",d);
+        return  ~d;
+        //return 0;
 } //~x basically returns -(x+1)
 
 int main()
@@ -132,6 +143,7 @@ int main()
         printf("%x is the result for logicalShift(0x87654321, 4) \n",logicalShift(0x87654321, 4));
         printf("%d will be the answer on calling conditional function\n",conditional(-2,4,5));
         printf("%d is result for bang(n) n=0 in this case \n",bang(0));
+	printf("%d is the result for invert(18,5,2)\n",invert(18,5,2));
         
 	return 0;
 
