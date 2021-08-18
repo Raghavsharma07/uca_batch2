@@ -117,18 +117,14 @@ int invert (int x, int p, int n) {
 
         //TODO
 	//x=18  -> 1 0 0 1 0
-        //p=5
+        //p=3
         //n=2
-        int k=(1<<31)>>31; //-1
-        int b=((1<<n)+k);// n=2 -> 11 , n=3->111 and so on  ( b= 3 in our case {11} )
-        int c=b<<(p-n);// say b is 11 and p-n =2 then c gives 1100 (say p is 4 and n is 2)  //11000 (taking 1s to position p) 
-        // printf("%d ",c);
-        // printf("%d ",b);
-        int d=((x&c)>>(p-n));//x&c extracts given bytes and right shift removes additional nos following
-        // printf(" %d ",d);
-        return  ~d;
-        //return 0;
-} //~x basically returns -(x+1)
+	//result=  1 0 1 0 0
+        
+        int k=(1<<n)-1; //this would give n 1s ( in binary form ex: n=2 -> 11  n=3-> 111
+        int y=k<<(p-n);//this would take it to the desired position
+        return y^x; //xor to invert the n bits from position p
+}
 
 int main()
 {
@@ -143,7 +139,7 @@ int main()
         printf("%x is the result for logicalShift(0x87654321, 4) \n",logicalShift(0x87654321, 4));
         printf("%d will be the answer on calling conditional function\n",conditional(-2,4,5));
         printf("%d is result for bang(n) n=0 in this case \n",bang(0));
-	printf("%d is the result for invert(18,5,2)\n",invert(18,5,2));
+	printf("%d is the result for invert(18,3,2)\n",invert(18,3,2));
         
 	return 0;
 
