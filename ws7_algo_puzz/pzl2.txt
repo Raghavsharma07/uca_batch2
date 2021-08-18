@@ -6,4 +6,5 @@ Puzzle 2
 
 Approach 
 
-
+Now in this case as the number of hats are more than 2 so we can't use odd even . Thus here we can try using mod. they can predecide that first person will speak 0,1,2 considering whether the sum of hats(0,1,2)
+is divisible by it or not. Now from his call other person ahead of him can get an idea of the sum in front of him and the call made by the person before them, thus, guessing their hat color(0,1 or 2 say for three diff colors) 

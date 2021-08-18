@@ -6,6 +6,6 @@ Puzzle 3
 
 Approach
 
-
+As we did in the previous case for three hats, this method can be made generic by predeciding first person's call and some computation of sum and divisibilty of persons in front to guess their hat, thus mod operator can be used .
 
 
