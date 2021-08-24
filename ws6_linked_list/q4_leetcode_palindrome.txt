@@ -1,0 +1,46 @@
+/*
+ * Uca Batch
+ * Group 2
+ *
+ * Assignment 6
+ *  ques -4
+ *  check palindome
+ *  @Raghav
+ *  24/08/2021
+ */
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+bool isPalindrome(struct ListNode* head){
+   struct ListNode *p=head,*q=head;
+    int ct=0;
+    while(p!=NULL)
+    {
+        ct++;
+        p=p->next;
+    }
+    int a[ct],i=0;
+    while(q!=NULL)
+    {
+        a[i++]=q->val;
+        q=q->next;
+    }
+    int l=0,r=ct-1;
+    while(l<=r)
+    {
+        if(a[l]!=a[r])
+        return false;
+        l++;
+        r--;
+    }
+    
+    return true;
+
+}

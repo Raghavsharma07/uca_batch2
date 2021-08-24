@@ -1,0 +1,56 @@
+/*
+UCA BATCH
+GROUP 2
+Worksheet 6
+
+ques 6
+
+Leetcode
+remove nth node from end
+@Raghav
+
+24/08/2021
+
+*/
+
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
+int ct=0;
+    struct ListNode *p=head,*p1=head,*p2=NULL;
+    if(p==NULL || p->next==NULL)
+        return 0;
+    while(p!=NULL)
+    {
+        ct++;
+        p=p->next;
+    }
+    int pos=ct-n,i;
+    if(pos==0)
+    {
+        p1=head;
+        head=head->next;
+        free(p1);
+    }
+    else
+    {
+        for(i=0;i<pos;i++)
+        {
+            p2=p1;
+            p1=p1->next;
+        }
+        p2->next=p1->next;
+        //x=p->data;
+        free(p1);
+    }
+    return head;
+
+}

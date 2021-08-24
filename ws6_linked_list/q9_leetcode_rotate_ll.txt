@@ -1,0 +1,52 @@
+/*
+UCA BATCH
+GROUP 2
+Worksheet 6
+
+ques 9
+
+Leetcode
+rotate linked lists
+@Raghav
+
+24/08/2021
+
+*/
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* rotateRight(struct ListNode* head, int k){
+    struct ListNode *h=head;
+    int ct=0;
+    while(h!=NULL)
+    {
+        ct++;
+        h=h->next;
+    }
+    if(head==NULL)
+        return 0;
+        if(head->next==NULL && head!=NULL)
+            return head;
+    for(int i=0;i<k%ct;i++)
+    {
+        struct ListNode *q=head,*p2=head,*p1;
+        //rotate list by one element
+    while(head->next!=NULL)
+    {
+        p1=head;
+        head=head->next;
+    }
+    p1->next=NULL;
+    head->next=p2;
+    
+    }
+    return head;
+
+}
+
