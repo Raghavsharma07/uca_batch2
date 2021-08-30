@@ -42,7 +42,7 @@ void display(struct Node *p)
 
 void atHead(struct Node *p, int ele)
 {
-	struct Node *t=(struct Node*)malloc(sizeof(int));
+	struct Node *t=(struct Node*)malloc(sizeof(struct Node));
 	struct Node *f=first;
         t->data=ele;
         if(p==NULL)
@@ -63,7 +63,7 @@ void atHead(struct Node *p, int ele)
 
 void atTail(struct Node *p, int ele)
 {
-	struct Node *t=(struct Node*)malloc(sizeof(int));
+	struct Node *t=(struct Node*)malloc(sizeof(struct Node));
         t->data=ele;
         if(p==NULL)
         {
