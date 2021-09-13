@@ -1,12 +1,11 @@
 /*
- * Uca Batch
- * Group 2
+ * UCA BATCH 2
+ * LEETCODE PROBLEM 
  *
- * Assignment 6
- *  ques -4
- *  check palindome
- *  @Raghav
- *  24/08/2021
+ * LINKED LISTS
+ * Ques4 - Check palindrome 
+ *
+ * @Raghav
  */
 
 /**
@@ -19,28 +18,28 @@
 
 
 bool isPalindrome(struct ListNode* head){
-   struct ListNode *p=head,*q=head;
+    struct ListNode *p=head,*q=head;
     int ct=0;
     while(p!=NULL)
     {
         ct++;
         p=p->next;
     }
-    int a[ct],i=0;
+    int left=0,right=ct-1,i=0,a[ct];
     while(q!=NULL)
     {
         a[i++]=q->val;
         q=q->next;
     }
-    int l=0,r=ct-1;
-    while(l<=r)
+    while(left<=right)
     {
-        if(a[l]!=a[r])
-        return false;
-        l++;
-        r--;
+        if(a[left]!=a[right])
+        {
+            return false;
+        }
+        left++;
+        right--;
     }
-    
     return true;
 
 }
