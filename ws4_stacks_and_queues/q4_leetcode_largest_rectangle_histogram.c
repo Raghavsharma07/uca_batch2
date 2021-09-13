@@ -4,7 +4,6 @@
 //STACK USING QUEUE
 //@Raghav
 
-Code:
 
 
 
@@ -30,11 +29,12 @@ int largestRectangleArea(int* a, int n){
             ar=l*b;
             if(ar>maxarea)
             maxarea=ar;
-            
-            
+
+
         }
         //printf("\n");
     }
     //printf("%d\n",maxarea);
     return maxarea;
 }
+
